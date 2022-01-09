@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvanJZMagic-Home</title>
+    <link rel="shortcut icon" type="image/png" href="YoutubeFavicon.png"/>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       body{
+            background-image: url(Images/skyline4_4400x2024.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style> 
+    <script src="script.js"></script>
+</head>
+<body></body>
+<div class='container'>
+
+    <header>
+        <!-- <div class="logo"><img src="Images/evan&josh-white-60.png" alt=""></div> -->
+        <div class=logo>EvanJZ Magic</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Products</a>
+                    <ul class="dropdown">
+                        <li><a href="product1.html">Product 1</a></li>
+                        <li><a href="product2.html">Product 2</a></li>
+                        <li><a href="product3.html">Product 3</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#iAbout">About</a></li>
+                <li><a href="#iContact">Contact</a></li> -->
+            </ul>
+        </nav>
+        <div><button class="bttn" onclick="openForm()">Sign In</button></div>
+ </header>
+
+    <div class="free-acc-box">
+        <div class="free-acc-text">
+            Use this free Account while we tidy up the website :)
+            <br>Account Username: free
+            <br>Password: free
+        </div>
+    </div>
+       </div>
+        <div class="form-box" id="popup">
+            <form action="" class="form">
+                <div class="form-title">EvanJZ Magic</div><br>
+                <div class="entries">
+                    <input type="text" placeholder="Email Address" required id='email'>
+                    <input type="password" placeholder="Password" required id='pw'>
+                </div>
+                <div class="forgot-pw"><a href="forgotpw.html">Forgot password?</a></div>
+                <div class="signin-btn">
+                    <input type="submit" value="Sign In" onclick="flogin()">
+                </div>
+                <div class="signup">Not a member? <a href="signup.html">Sign up here!</a></div>
+                <div class="close-btn">
+                    <input type="submit" value="Close" onclick="closeForm()">
+                </div>
+                
+            </form>
+        </div>
+    
+    </body>
+    
+    </html>

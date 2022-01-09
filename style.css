@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    width:100%;
+    height:100vh;
+/* display: flex; 
+flex-direction:column;
+justify-content:center; */
+overflow-y:scroll;
+scroll-behavior:smooth;
+scroll-snap-type:y mandatory;
+}
+
+.home{
+background-image: url(bk.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+
+width: 100%;
+height: 100vh;
+
+display: flex;
+justify-content: center;
+align-items: center;
+scroll-snap-align:center;
+}
+.home_text{
+    font-family: Nunito;
+    font-size: 2rem;
+}
+/* ---------------------------------------------------------------------------80 */
+body{
+    background-image: url(Images/skyline_4400x2000.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ---------------------------------------------------------------------------80 */
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* ---------------------------------------------------------------------------80 */
+.logo{
+    font-family: Lato, sans-serif;
+    color: #ffe8d6;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+/* ---------------------------------------------------------------------------80 */
+.menu{
+    height: 60px;
+    display: flex;
+}
+
+.menu li{
+    padding: 20px;
+
+    list-style-type: none;
+    font-size: 20px;
+
+    /* words alignment in the menu element*/
+    display: flex;
+    align-items: center;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu li a:hover{
+    color:#ffe8d6;
+}
+
+/* ---------------------------------------------------------------------------80 */
+.dropdown{
+    background-color: rgba(0,0,0,0.3);
+    flex-direction: column;
+    position:absolute;
+    top: 60px;
+    width: 160px;
+    /* border-radius: 0 0 2px 2px; */
+    display: none;
+}
+
+.menu li:hover ul{
+    display: flex;
+
+}
+.dropdown li{
+    /* padding: 8px; */
+    padding: 0;
+}
+
+.dropdown li a{
+    padding: 10px;
+}
+
+.dropdown li a:hover{
+    color: grey;
+    background-color: #ffe8d6;
+    /* border-radius: 2px; */
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------------80 */
+.bttn{
+    border-width: 4px;
+    border-color: lightgrey;
+    font-size: 16px;
+    line-height: 1;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    background-color: darkgrey;
+    color: white;
+    cursor:pointer;
+}
+
+.bttn:hover{
+    color: #ffe8d6;
+}
+
+/* ---------------------------------------------------------------------------80 */
+#popup{
+    display: none;
+}
+
+/* ---------------------------------------------------------------------------80 */
+.form-box{
+    position:absolute;
+    right: 100px;
+    top: 120px;
+    /* background-color: rgba(0,0,0,0.3); */
+    background-color: rgba(0, 255, 255, 0.8);
+    width: 300px;
+    height: 380px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 10px 16px rgba(0,0,0,0.6);
+}
+    /* .form{} */
+        .form-title{
+            font-size: 30px;
+            color: #000000;
+            font-weight:bolder;
+            font-family: Lato, sans-serif;
+            text-align: center;
+        }
+    
+        .entries{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            height: 80px;
+            gap: 6px;
+        }
+            .entries :focus{
+                outline: none;
+                border-color: #000000;
+                border-width: 2px;
+            }
+            .entries input{
+                flex-basis: 100%;
+                padding: 4px;
+                border: 1px solid white;
+                border-radius: 4px;
+            }
+         
+            
+
+        .forgot-pw{
+            margin: 10px;
+            margin-top: 14px;
+        }
+            .forgot-pw a{
+                text-decoration: none;
+                color: rgb(0, 4, 255);
+            }
+            .forgot-pw a:hover{
+                color: #0026ff;
+                text-decoration: underline
+            }
+            /* .forgot-pw input :focus{
+                color: #1a90ff
+            } */
+
+
+        .signin-btn{
+            display: flex;
+            margin: 10px;
+            margin-top: 20px;
+            height: 37px;
+            border: 0;
+        }
+            .signin-btn input{
+                flex-basis: 100%;
+                border: 0;
+                background-color: #008cff;
+                color: rgb(0, 0, 0);
+                font-size: 20px;
+                border-radius: 4px;
+            }
+        .close-btn{
+            display: flex;
+            margin: 10px;
+            margin-top: 20px;
+            height: 37px;
+            border: 0;
+        }
+        .close-btn input{
+            flex-basis: 100%;
+            border: 0;
+            background-color: #008cff;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            border-radius: 4px;
+        }
+        .signup{
+            margin-top: 20px;
+            text-align: center;
+            color: rgb(0, 0, 0)
+        }
+            .signup a{
+                color: rgb(0, 4, 255);
+                text-decoration: none;
+                
+            }
+            .signup a:hover{
+                color: #0004ff;
+                text-decoration: underline;
+            }
+
+/* ---------------------------------------------------------------------------80 */
+.msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 200px */
+}
+
+.about{
+    border-left-width:0;
+    border-right-width:0;
+    border-style:solid;
+    border-color:goldenrod;
+    border-top-width:5;
+    width:100%;
+    height:100vh;
+    background-image:url(aboutmebk3.png);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    scroll-snap-align:center;
+    color:ghostwhite;
+}
+.BIGaboutTEXT{
+    margin-right:5em;
+}
+.free-acc-box{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.free-acc-text{
+    font-size:larger;
+    font-weight:bold;
+}
+.contact2 {
+    width: 100%;
+    height: 100vh;
+    padding: 60px;
+    background-image:url(aboutmebk.jpg);
+
+    scroll-snap-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    scroll-snap-align:center;
+}
+    
+.cbox1 {
+    width: 300px;
+    height: 550px;
+    background-image: url(bk.jpg);
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cbox2 {
+    width: 500px;
+    height: 550px;
+    background-color: white;
+
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  width: 460px
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.contact2 {
+    width: 100%;
+    height: 100vh;
+    padding: 60px;
+    background-image:url(aboutmebk.jpg);
+
+    scroll-snap-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    scroll-snap-align:center;
+}
+    
+.cbox1 {
+    width: 300px;
+    height: 550px;
+    background-image: url(bk.jpg);
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cbox2 {
+    width: 500px;
+    height: 550px;
+    background-color: white;
+
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.fb {
+  color: #b20cd3;
+  text-decoration: none;
+  padding: 6px;
+}
+.fb:hover {
+  font-size: 1.2em;
+  transition-duration: 0.5s;
+  
+}
+
+.twitter {
+  color: #55ACEE;
+  text-decoration: none;
+  padding: 6px;
+}
+.twitter:hover {
+  font-size: 1.2em;
+  transition-duration: 0.5s;
+}
+
+.google {
+  color: #dd4b39;
+  text-decoration: none;
+  padding: 6px;
+}
+.google:hover {
+  font-size: 1.2em;
+  transition-duration: 0.5s;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  width: 460px
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
